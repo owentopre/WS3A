@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage[left=3.50cm, right=2.50cm, top=2.00cm, bottom=3.00cm,nohead,nofoot]{geometry}
+\usepackage{braket}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{subfigure}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{float}
+\usepackage[version=4]{mhchem}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[super]{nth}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\newcounter{alphasect}
+\def\alphainsection{0}
+
+\let\oldsection=\section
+\def\section{%
+  \ifnum\alphainsection=1%
+    \addtocounter{alphasect}{1}
+  \fi%
+\oldsection}%
+
+\renewcommand\thesection{%
+  \ifnum\alphainsection=1% 
+    \alph{alphasect}
+  \else%
+    \arabic{section}
+  \fi%
+}%
+
+\newenvironment{alphasection}{%
+  \ifnum\alphainsection=1%
+    \errhelp={Let other blocks end at the beginning of the next block.}
+    \errmessage{Nested Alpha section not allowed}
+  \fi%
+  \setcounter{alphasect}{0}
+  \def\alphainsection{1}
+}{%
+  \setcounter{alphasect}{0}
+  \def\alphainsection{0}
+}%
+
+\title{\textbf{375 Worksheet 3 Group A}}
+\author{Owen Roberts}
+\date{November 2021}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{alphasection}
+
+\section{}
+    \begin{align}
+    [A,B]
+    \end{align}
+    
+    
+\section{}
+    \begin{align}
+        \ket{0,0} \\
+        \hat{N}_{A}\ket{n_{A}}
+    \end{align}
+    
+    
+\end{alphasection}
+\end{document}
