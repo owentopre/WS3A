@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{blindtext}
-\usepackage[left=3.50cm, right=2.50cm, top=2.00cm, bottom=3.00cm,nohead,nofoot]{geometry}
+\usepackage[left=3.50cm, right=2.50cm, top=1.00cm, bottom=3.00cm,nohead,nofoot]{geometry}
 \usepackage{braket}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -51,7 +51,7 @@
 }%
 
 \title{\textbf{375 Worksheet 3 Group A}}
-\author{Owen Roberts}
+\author{Owen Roberts, Elliot Williamson, Harvey Stanfield, George Chira, Becky Allen}
 \date{November 2021}
 
 
@@ -63,17 +63,26 @@
 
 \section{}
     Simultaneity proved through commutation,
+
     \begin{align}
-    [\hat{N}_A,\hat{N}_B] = \hat{a}_{A}^{\dagger}\hat{a}_{A}\hat{a}_{B}^{\dagger}\hat{a}_{B}-\hat{a}_{B}^{\dagger}\hat{a}_{B}\hat{a}_{A}^{\dagger}\hat{a}_{A}
+        [\hat{N}_A,\hat{N}_B] &= \hat{a}_{A}^{\dagger}\hat{a}_{A}\hat{a}_{B}^{\dagger}\hat{a}_{B}-\hat{a}_{B}^{\dagger}\hat{a}_{B}\hat{a}_{A}^{\dagger}\hat{a}_{A} \\
+        \hat{a}_{\alpha} &= \sqrt{m\omega/2\hbar}(\hat{x}_{\alpha}+i\hat{p}_{\alpha}/m\omega)\\
+        \hat{a}_{\alpha}^{\dagger} &= \sqrt{m\omega/2\hbar}(\hat{x}_{\alpha}-i\hat{p}_{\alpha}/m\omega)\\
+        \hat{a}_{\alpha}^{\dagger}\hat{a}_{\alpha} &= m\omega/2\hbar(\hat{x}_{\alpha}^{2}+\hat{p}_{\alpha}^{2}/(m\omega)^2)\label{eq:V}
+    \end{align}
+    And because $[\hat{x}_A, \hat{x}_B]=[\hat{p}_A, \hat{p}_B]=0$, and $\hat{a}_{A}$ and $\hat{a}_B$ depend only on $\hat{x}_A,\hat{p}_A$ and $\hat{x}_B,\hat{p}_B$ respectively, we can treat $\hat{a}_{B}^{\dagger}\hat{a}_{B}\hat{a}_{A}^{\dagger}\hat{a}_{A}$ as $\hat{a}_{A}^{\dagger}\hat{a}_{A}\hat{a}_{B}^{\dagger}\hat{a}_{B}$. Therefore:
+    \begin{align}
+        [\hat{N}_A, \hat{N}_B] &= 0
     \end{align}
     
-    
+
 \section{}
+
     \begin{align}
         \ket{0,0} \\
         \hat{N}_{A}\ket{n_{A}}
     \end{align}
     
-    
 \end{alphasection}
+
 \end{document}
